@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>XX大学办公自动化聊天系统</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/button.css' />
+</head>
+
+<body>
+  <h1>欢迎来到XX大学办公自动化聊天系统！</h1>
+  <h2><%= message%></h2>
+  <div id="butt">
+    <button class="but" onclick="document.getElementById('register').style.display='block'">Register
+    </button>
+    <button class="but" onclick="document.getElementById('login').style.display='block'">Login
+    </button>
+  </div>
+  <!--登录界面-->
+  <div id="login" class="modal">
+    <form class="model-content animate" action="/login" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('login').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="https://static.runoob.com/images/mix/img_avatar.png" alt="Avatar" class="avatar">
+      </div>
+      <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <button type="submit" class="bbb">Login</button>
+        <input type="checkbox" checked="checked"> Remember me
+      </div>
+    </form>
+  </div>
+  <!--注册界面-->
+  <div id="register" class="modal">
+    <form class="model-content animate" action="/register" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('register').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <img src="https://static.runoob.com/images/mix/img_avatar.png" alt="Avatar" class="avatar">
+      </div>
+      <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" onkeyup="findinDB()" required>
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="pwd1" name="password" required>
+        <label><b>Password Verify</b></label>
+        <input type="password" placeholder="Enter Password Again" id="pwd2" name="password2" onkeyup="validate()" required>
+        <button type="submit" class="bbb" id="submits">Register</button>
+        <button id="resett" class="bbb" type="reset">Reload</button>
+      </div>
+      <span id="tishi"></span>
+    </form>
+  </div>
+</body>
+</html>
+<script>
+    function findinDB(){
+      //TODO:与后端数据库连接，查询用户名是否存在
+    }
+    function validate() {
+           var pwd1 = document.getElementById("pwd1").value;
+           var pwd2 = document.getElementById("pwd2").value;
+           if(pwd1 == pwd2) {
+                document.getElementById("tishi").innerHTML="<font color='green'>两次密码相同</font>";
+                document.getElementById("submits").disabled = false;
+            }
+           else {
+              document.getElementById("tishi").innerHTML="<font color='red'>两次密码不相同</font>";
+              document.getElementById("submits").disabled = true;
+            }
+     }
+</script>
