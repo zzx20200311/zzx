@@ -1,0 +1,25 @@
+{
+  "name": "chat2",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dgram": "^1.0.1",
+    "ejs": "^3.0.2",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "iconv-lite": "^0.5.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "net": "^1.0.2",
+    "silly-datetime": "^0.1.2",
+    "socket.io": "^2.3.0",
+    "underscore": "^1.10.2"
+  }
+}

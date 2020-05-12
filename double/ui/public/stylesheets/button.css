@@ -1,0 +1,86 @@
+  h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+    color:black;
+    text-align: center;
+  }
+	.select {
+		display: inline-block;
+		width: 250px;
+		position: relative;
+		vertical-align: middle;
+		padding: 0;
+		overflow: hidden;
+		background-color: #fff;
+		color: #555;
+		border: 1px solid #aaa;
+		text-shadow: none;
+		border-radius: 4px;	
+		transition: box-shadow 0.25s ease;
+		z-index: 2;
+	}
+	.select:hover {
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+	}
+	.select:before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		border-top-color: #ccc;
+		top: 14px;
+		right: 10px;
+		cursor: pointer;
+		z-index: -2;
+	}
+	.select select {
+		cursor: pointer;
+		padding: 10px;
+		width: 100%;
+		border: none;
+		background: transparent;
+		background-image: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	}
+ 
+	.select select:focus {
+		outline: none;
+	}
+
+	.modal {
+		text-align: center;
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 999; /* Sit on top */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		padding-top: 60px;
+	  }
+	  table.gridtable {
+		font-family: verdana,arial,sans-serif;
+		font-size:5px;
+		color:#333333;
+		border-width: 1px;
+		border-color: #7FFFD4;
+		border-collapse: collapse;
+	 }
+	  table.gridtable th {
+		border-width: 1px;
+		padding: 3px;
+		border-style: solid;
+		border-color: #666666;
+		background-color: #FAEBD7;
+	  }
+	 table.gridtable td {
+		 border-width: 1px;
+		 padding: 3px;
+		 border-style: solid;
+		 border-color: #666666;
+		background-color: LightCyan;
+	 }

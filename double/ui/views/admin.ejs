@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<body>
+    <h1> Hello,Admin。<%=user_name%>!</h1>
+    <div id="butt">
+        <button class="but" onclick="logout()">退出
+        </button>
+    </div>
+    <table id="table-1" border="8" width="20%" cellspacing="0" cellpadding="10" align="center">
+        <caption>
+            用户信息表
+        </caption>
+        <thead>
+            <tr>
+                <th>用户</th>
+                <th>密码</th>
+                <th>选项</th>
+            </tr>
+        </thead>
+        <tbody id="sbsb">
+        </tbody>
+    </table>
+</body>
+</html>
+<script type="text/javascript" src="/stylesheets/admin.js"></script>

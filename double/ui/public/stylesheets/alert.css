@@ -1,0 +1,26 @@
+.container {
+            width: 900px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        #myModel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            background-color: rgba(9, 9, 9, 0.63);
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+
+        .model-content {
+            width: 50%;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 6px;
+            margin: 100px auto;
+            line-height: 30px;
+            z-index: 10001;
+        }
