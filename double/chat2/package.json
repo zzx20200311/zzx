@@ -20,6 +20,6 @@
     "net": "^1.0.2",
     "silly-datetime": "^0.1.2",
     "socket.io": "^2.3.0",
-    "underscore": "^1.10.2"
+    "underscore": "^1.12.1"
   }
 }
